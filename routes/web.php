@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\api\PostController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PostController::class, 'welcomeIndex']);
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', [PostController::class, 'index']);
+Route::post('/add-post', [PostController::class, 'createPost']);

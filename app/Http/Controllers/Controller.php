@@ -12,24 +12,24 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function index(){
-        $users = User::all();
+    // public function index(){
+    //     $users = User::all();
 
-        return response()->json([
-            'status' => 200,
-            'user' => $users,
-        ]);
-    }
+    //     return response()->json([
+    //         'status' => 200,
+    //         'user' => $users,
+    //     ]);
+    // }
 
-    public function edit($id){
-        $user = User::find($id);
+    // public function edit($id){
+    //     $user = User::find($id);
 
-        if($user){
+    //     if($user){
 
-            return response()->json([
-                'status' => 200,
-                'user' => $user,
-            ]);
-        }
-    }
+    //         return response()->json([
+    //             'status' => 200,
+    //             'user' => $user,
+    //         ]);
+    //     }
+    // }
 }
