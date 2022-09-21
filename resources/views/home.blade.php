@@ -14,7 +14,14 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <div class="post-wraper">
+                        <div class="post-header">
+                            Title
+                            <div class="post-body">
+                                body
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

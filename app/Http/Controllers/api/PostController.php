@@ -9,16 +9,15 @@ use App\Http\Controllers\Controller;
 class PostController extends Controller
 {
     public function index(){
-        $post = Post::new();
-
-        return response()->json([
-            'status' => 200,
-            'image'
-        ]);
+        $posts = Post::all();
     }
 
     public function createPost(Request $request){
+        $post = Post::new();
         $post->post_title = $request->input('post_title');
-        $post->
+        $post->post_image = $request->input('post_image');
+        $post->post_body = $request->input('post_body');
     }
+
+    
 }
